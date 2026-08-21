@@ -117,7 +117,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
-  min-height: 100dvh;
+  min-height: 100svh;
 }
 
 body.is-loading {
@@ -170,6 +170,18 @@ em {
 }
 
 
+/* ios draws U+2733 as a green emoji unless text presentation is forced */
+.asterisk,
+.preloader-mark,
+.quote-mark,
+.nav-logo span,
+.marquee-track i,
+.portrait-tag,
+.pf-mono i,
+.hi-form-title {
+  font-variant-emoji: text;
+}
+
 /* ═══════════ OVERLAYS ═══════════ */
 .grain {
   position: fixed;
@@ -188,6 +200,11 @@ em {
   50% { transform: translate(3%, -2%); }
   75% { transform: translate(-3%, -3%); }
   100% { transform: translate(2%, 2%); }
+}
+@media (max-width: 768px) {
+  .grain {
+    animation: none;
+  }
 }
 
 .progress-bar {
@@ -407,7 +424,7 @@ em {
 }
 
 .hero-inner {
-  min-height: 100dvh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   padding-top: var(--space-6);

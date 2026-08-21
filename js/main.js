@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   KARL ✳ YU — Portfolio 2026
+   KARL ✳︎ YU — Portfolio 2026
    Motion choreography 
    ═══════════════════════════════════════════════════════════ */
 
@@ -301,7 +301,7 @@
           if (!res.ok) throw new Error("send failed");
           hiForm.reset();
           newChallenge();
-          setNote("sent — talk soon ✳");
+          setNote("sent — talk soon ✳︎");
         } catch (err) {
           setNote("couldn't send — try the email link instead");
         } finally {
@@ -321,14 +321,14 @@
   const ABOUT_SLIDES = [
     {
       img: "assets/me-1.jpg",
-      tag: "hello, it's me ✳",
+      tag: "hello, it's me ✳︎",
       text:
         "I'm a student who builds systems for both fun and use. Full-stack apps, scrapers, " +
         "and data pipelines that automate the boring parts of life. Still learning, always shipping.",
     },
     {
       img: "assets/me-2.jpg",
-      tag: "probably debugging ✳",
+      tag: "probably debugging ✳︎",
       text:
         "Most evenings you'll find me three tabs deep in documentation, arguing with an LLM " +
         "about side quests and 2 AM deploys. The fastest way I've found to learn is to build " +
@@ -336,7 +336,7 @@
     },
     {
       img: "assets/dogs.jpg",
-      tag: "my coding assistants ✳",
+      tag: "my coding assistants ✳︎",
       text:
         "The coding assistants. They supervise every build from the floor beside my desk, " +
         "enforce mandatory walk breaks, and have never once shipped a regression - easily " +
@@ -344,7 +344,7 @@
     },
     {
       collage: true, // shows the 2×2 hobby grid (assets/hobby-1.jpg … hobby-4.jpg)
-      tag: "hobbies ✳",
+      tag: "hobbies ✳︎",
       text:
         "Away from Keyboard I chase the hobbies opposite to side projects - outdoor adrenaline, " +
         "plus whatever new obsession this month brought. Four tiles of proof.",
@@ -427,7 +427,7 @@
 
   /* ───────── Smooth scroll (Lenis) ───────── */
   let lenis = null;
-  if (typeof window.Lenis !== "undefined") {
+  if (typeof window.Lenis !== "undefined" && finePointer) {
     lenis = new Lenis({ duration: 1.15, smoothWheel: true });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((t) => lenis.raf(t * 1000));
@@ -548,15 +548,22 @@
 
   /* ───────── Nav hide on scroll down ───────── */
   const nav = $("#nav");
+  let navLastY = 0;
   ScrollTrigger.create({
     start: "top top",
     end: "max",
     onUpdate(self) {
-      if (self.scroll() < 80) {
+      const y = self.scroll();
+      if (y < 80) {
         nav.classList.remove("nav-hidden");
-      } else {
-        nav.classList.toggle("nav-hidden", self.direction === 1);
+        navLastY = y;
+        return;
       }
+      // needs real travel before flipping, the ios url bar sliding away
+      // is otherwise enough to make it twitch
+      if (Math.abs(y - navLastY) < 60) return;
+      nav.classList.toggle("nav-hidden", y > navLastY);
+      navLastY = y;
     },
   });
 
