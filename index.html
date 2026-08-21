@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karl Yu — Full-Stack &amp; Data Automation</title>
+  <meta name="description" content="Karl Yu is a student engineer who builds systems — full-stack apps, scrapers and data pipelines that automate the boring parts of life." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%9C%B3%3C/text%3E%3C/svg%3E" />
+  <script>try{if(localStorage.getItem("ky-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════ PRELOADER ══════════ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <p class="preloader-name">Karl<span class="preloader-mark">✳</span>Yu</p>
+      <p class="preloader-tag">Full‑Stack × Data Automation</p>
+    </div>
+    <p class="preloader-count" id="preloaderCount">00</p>
+  </div>
+
+  <!-- ══════════ OVERLAYS ══════════ -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ══════════ NAV ══════════ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner container">
+      <a class="nav-logo" href="#top" data-cursor>Karl<span>✳</span>Yu</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#works" data-cursor>Projects</a>
+        <a href="#about" data-cursor>About</a>
+        <a href="#services" data-cursor>Toolbox</a>
+        <a href="#play" data-cursor>Play</a>
+        <a href="#contact" data-cursor>Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" data-cursor>
+        <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg>
+        <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="orb orb-c"></div>
+      </div>
+
+      <div class="hero-inner container">
+        <div class="hero-top">
+          <p class="hero-eyebrow" data-reveal><span class="asterisk">✳</span> Karl Yu — Student engineer</p>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="hero-line"><span class="hero-line-text" data-split>BUILDING</span></span>
+          <span class="hero-line hero-line-serif"><span class="hero-line-text" data-split>systems</span></span>
+          <span class="hero-line hero-line-right"><span class="hero-line-text" data-split>THAT SCALE</span></span>
+        </h1>
+
+        <div class="hero-bottom">
+          <div class="hero-cta" data-reveal>
+            <a class="btn-pill magnetic" href="#works" data-cursor><span class="btn-pill-label">See my projects</span><span class="btn-pill-arrow">↓</span></a>
+            <a class="link-underline" href="#contact" data-cursor>Say hello</a>
+          </div>
+          <div class="hero-scroll" data-reveal aria-hidden="true">
+            <span>Scroll</span>
+            <span class="hero-scroll-line"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ MARQUEE ══════════ -->
+    <!-- six copies: the loop animates -50%, so one half (3 copies) must
+         always be wider than the viewport for a seamless carousel -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Full‑Stack Engineering <i>✳</i> Data Automation <i>✳</i> ETL Pipelines <i>✳</i> API Integration <i>✳</i> Scripts For Everything <i>✳</i> </span><span>Full‑Stack Engineering <i>✳</i> Data Automation <i>✳</i> ETL Pipelines <i>✳</i> API Integration <i>✳</i> Scripts For Everything <i>✳</i> </span><span>Full‑Stack Engineering <i>✳</i> Data Automation <i>✳</i> ETL Pipelines <i>✳</i> API Integration <i>✳</i> Scripts For Everything <i>✳</i> </span><span>Full‑Stack Engineering <i>✳</i> Data Automation <i>✳</i> ETL Pipelines <i>✳</i> API Integration <i>✳</i> Scripts For Everything <i>✳</i> </span><span>Full‑Stack Engineering <i>✳</i> Data Automation <i>✳</i> ETL Pipelines <i>✳</i> API Integration <i>✳</i> Scripts For Everything <i>✳</i> </span><span>Full‑Stack Engineering <i>✳</i> Data Automation <i>✳</i> ETL Pipelines <i>✳</i> API Integration <i>✳</i> Scripts For Everything <i>✳</i> </span>
+      </div>
+    </div>
+
+    <!-- ══════════ ABOUT ══════════ -->
+    <section class="about container" id="about">
+      <div class="section-head">
+        <p class="section-index">( 01 )</p>
+        <p class="section-label">About</p>
+      </div>
+      <div class="about-grid">
+        <div class="portrait-wrap" data-reveal>
+          <figure class="portrait">
+            <img src="assets/me-1.jpg" alt="Photo of Karl Yu" id="portraitImg" />
+            <span class="portrait-fallback" aria-hidden="true">
+              <span class="pf-mono">K<i>✳</i>Y</span>
+              <span class="pf-hint" id="pfHint">your photo here<br/>assets/me-1.jpg</span>
+            </span>
+            <span class="portrait-collage" aria-hidden="true">
+              <span class="pc-tile"><img src="assets/hobby-1.jpg" alt="" /><i class="pc-hint">hobby‑1.jpg</i></span>
+              <span class="pc-tile"><img src="assets/hobby-2.jpg" alt="" /><i class="pc-hint">hobby‑2.jpg</i></span>
+              <span class="pc-tile"><img src="assets/hobby-3.jpg" alt="" /><i class="pc-hint">hobby‑3.jpg</i></span>
+              <span class="pc-tile"><img src="assets/hobby-4.jpg" alt="" /><i class="pc-hint">hobby‑4.jpg</i></span>
+            </span>
+          </figure>
+          <div class="portrait-controls">
+            <p class="portrait-tag" id="portraitTag">hello, it's me <span class="asterisk">✳</span></p>
+            <div class="portrait-nav">
+              <button class="p-arrow" id="pPrev" type="button" aria-label="Previous photo" data-cursor>←</button>
+              <span class="p-counter" id="pCounter">1 / 4</span>
+              <button class="p-arrow" id="pNext" type="button" aria-label="Next photo" data-cursor>→</button>
+            </div>
+          </div>
+        </div>
+        <div class="about-body">
+          <p class="about-text" id="aboutText">
+            I'm a student who builds systems for both fun and use —
+            full‑stack apps, scrapers, and data pipelines that automate
+            the boring parts of life. Still learning, always shipping.
+          </p>
+          <div class="about-meta">
+            <p class="about-meta-item"><span>Currently</span>Studying &amp; shipping side projects</p>
+            <p class="about-meta-item"><span>Core stack</span>TypeScript · Python · SQL</p>
+            <p class="about-meta-item"><span>Favourite bug</span>The one that fixed itself</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ PROJECTS — expandable grid ══════════ -->
+    <section class="works container" id="works">
+      <div class="section-head">
+        <p class="section-index">( 02 )</p>
+        <p class="section-label">Projects</p>
+        <p class="section-note">click a card to expand</p>
+      </div>
+
+      <div class="work-grid" id="workGrid">
+        <article class="work-card">
+          <button class="work-card-head" type="button" aria-expanded="false" aria-controls="panel-timebuddy" data-cursor>
+            <span class="work-art wp-timebuddy"><i class="px-art px-hand" aria-hidden="true"></i><span class="wp-word">TimeBuddy</span></span>
+            <span class="work-card-meta">
+              <span class="work-card-title">TimeBuddy <em>2026</em></span>
+              <span class="work-card-tags">Time tracking · timebuddy.dev</span>
+            </span>
+            <span class="work-card-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="work-card-panel" id="panel-timebuddy">
+            <div class="work-card-inner">
+              <p class="work-card-desc">The time tracking system Pixel Buddy Solutions actually runs
+              on — contractors clock in, hours become payroll and client invoices, and month‑end
+              spreadsheet reconciliation is extinct. Multi‑tenant Next.js + TypeScript on Supabase
+              Postgres, built so the numbers can't quietly go wrong: rates snapshot at clock‑in,
+              approved entries are immutable.</p>
+              <a class="link-underline work-live" href="https://timebuddy.dev" target="_blank" rel="noopener" data-cursor>Visit timebuddy.dev ↗</a>
+              <ul class="work-chips"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Postgres RLS</li></ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <button class="work-card-head" type="button" aria-expanded="false" aria-controls="panel-portal" data-cursor>
+            <span class="work-art wp-portal"><i class="px-art px-hand px-mirror" aria-hidden="true"></i><span class="wp-word">Portal</span></span>
+            <span class="work-card-meta">
+              <span class="work-card-title">Portal <em>2025</em></span>
+              <span class="work-card-tags">Client insights · Web app</span>
+            </span>
+            <span class="work-card-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="work-card-panel" id="panel-portal">
+            <div class="work-card-inner">
+              <p class="work-card-desc">The client's window into Pixel Buddy Solutions — log in to
+              see your Contractor's (VAs) hours broken down in your own timezone, assign and track
+              tasks, and message the team; internal staff get an admin view across every client.
+              Multi‑tenant Next.js on Supabase Postgres, with isolation enforced in the database
+              itself.</p>
+              <a class="link-underline work-live" href="https://portal.pixelbuddysolutions.com" target="_blank" rel="noopener" data-cursor>Visit the portal ↗</a>
+              <a class="work-demo" href="https://portal.pixelbuddysolutions.com/demo" target="_blank" rel="noopener" data-cursor>no account? try the demo — still a work in progress ↗</a>
+              <ul class="work-chips"><li>Next.js</li><li>Supabase</li><li>Row‑level security</li><li>Recharts</li></ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <button class="work-card-head" type="button" aria-expanded="false" aria-controls="panel-tradedesk" data-cursor>
+            <span class="work-art wp-tradedesk"><i class="px-art px-chart" aria-hidden="true"></i><span class="wp-word">TradeDesk</span></span>
+            <span class="work-card-meta">
+              <span class="work-card-title">TradeDesk <em>2025</em></span>
+              <span class="work-card-tags">Stock trading · Live demo</span>
+            </span>
+            <span class="work-card-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="work-card-panel" id="panel-tradedesk">
+            <div class="work-card-inner">
+              <p class="work-card-desc">A paper‑trading terminal for stocks — quotes, order tickets,
+              positions and P&amp;L, without risking real money. Deployed and clickable right now.</p>
+              <a class="link-underline work-live" href="https://papertradedesk.fly.dev" target="_blank" rel="noopener" data-cursor>Open live demo ↗</a>
+              <ul class="work-chips"><li>React</li><li>WebSockets</li><li>Market data</li><li>Fly.io</li></ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <button class="work-card-head" type="button" aria-expanded="false" aria-controls="panel-relay" data-cursor>
+            <span class="work-art wp-relay"><i class="px-art px-bubble" aria-hidden="true"></i><span class="wp-word">Relay</span></span>
+            <span class="work-card-meta">
+              <span class="work-card-title">Relay <em>2024</em></span>
+              <span class="work-card-tags">Discord &amp; Slack automation</span>
+            </span>
+            <span class="work-card-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="work-card-panel" id="panel-relay">
+            <div class="work-card-inner">
+              <p class="work-card-desc">Webhooks in, formatted pings out — across Discord and Slack.
+              Class reminders, deploy alerts, and one very judgmental standup bot that asks what I
+              shipped yesterday. My first taste of gluing systems together.</p>
+              <ul class="work-chips"><li>Discord API</li><li>Slack API</li><li>Node</li><li>Cron</li></ul>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="works-footer">
+        <a class="link-underline" href="https://github.com/yucompiled" target="_blank" rel="noopener" data-cursor>More on GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- ══════════ TOOLBOX ══════════ -->
+    <section class="services container" id="services">
+      <div class="section-head">
+        <p class="section-index">( 03 )</p>
+        <p class="section-label">Toolbox</p>
+      </div>
+      <div class="services-grid">
+          <article class="service-card">
+            <p class="service-num">01</p>
+            <svg class="service-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 8l-8 8 8 8M20 8l8 8-8 8"/></svg>
+            <h3>Full‑Stack</h3>
+            <p class="service-desc">Web apps end to end — coursework, hackathons and side projects with React up front and Node or Python behind.</p>
+            <ul class="service-list"><li>React / Next.js</li><li>Node &amp; Python</li><li>PostgreSQL</li><li>API design</li></ul>
+          </article>
+          <article class="service-card">
+            <p class="service-num">02</p>
+            <svg class="service-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="6" cy="16" r="3"/><circle cx="26" cy="8" r="3"/><circle cx="26" cy="24" r="3"/><path d="M9 15l14-6M9 17l14 6"/></svg>
+            <h3>Data Automation</h3>
+            <p class="service-desc">My favourite rabbit hole — scrapers, schedulers and ETL pipelines that tidy messy data while I sleep.</p>
+            <ul class="service-list"><li>Python / Pandas</li><li>Web scraping</li><li>Airflow</li><li>SQL</li></ul>
+          </article>
+          <article class="service-card">
+            <p class="service-num">03</p>
+            <svg class="service-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="5" width="24" height="8" rx="2"/><rect x="4" y="19" width="24" height="8" rx="2"/><path d="M9 9h.01M9 23h.01"/></svg>
+            <h3>Infra &amp; DevOps</h3>
+            <p class="service-desc">Learning to make deploys boring — containers, CI/CD, and just enough cloud to be dangerous.</p>
+            <ul class="service-list"><li>Docker</li><li>GitHub Actions</li><li>AWS / GCP</li><li>Monitoring</li></ul>
+          </article>
+          <article class="service-card">
+            <p class="service-num">04</p>
+            <svg class="service-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 16h8M20 16h8M16 4v8M16 20v8"/><circle cx="16" cy="16" r="4"/></svg>
+            <h3>Integration</h3>
+            <p class="service-desc">Making systems talk — APIs, webhooks, bots, and the glue code that quietly saves hours every week.</p>
+            <ul class="service-list"><li>REST APIs</li><li>Webhooks</li><li>Discord / Slack bots</li><li>Cron jobs</li></ul>
+          </article>
+      </div>
+    </section>
+
+    <!-- ══════════ PLAYGROUND — the Friday button ══════════ -->
+    <section class="play" id="play">
+      <div class="play-wrap container">
+        <div class="section-head">
+          <p class="section-index">( 04 )</p>
+          <p class="section-label">The playground</p>
+          <p class="section-note">deploy responsibly</p>
+        </div>
+
+        <div class="play-intro" data-reveal>
+          <h2 class="play-title">Deploy on a <em>Friday</em></h2>
+          <p class="play-sub">The most feared button in software, recreated in a safe
+          environment. Probably safe. Press it and find out.</p>
+        </div>
+
+        <div class="play-board">
+          <div class="friday-zone">
+            <button class="friday-btn" id="fridayBtn" type="button" data-cursor>./deploy --prod --friday</button>
+            <p class="friday-count" id="fridayCount">incidents_caused: 0</p>
+          </div>
+
+          <div class="play-terminal">
+            <div class="play-term-head" aria-hidden="true"><i></i><i></i><i></i><span>karl@prod: ~/friday</span></div>
+            <div class="play-term-body" id="playTermBody" aria-live="polite">
+              <p class="tl">$ ctl status → prod is green. it is friday. don't.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ QUOTE ══════════ -->
+    <section class="quote container">
+      <p class="quote-mark" aria-hidden="true">✳</p>
+      <blockquote class="quote-text">
+        <span class="quote-line"><span class="quote-line-in">“If you have to do it twice,</span></span>
+        <span class="quote-line"><span class="quote-line-in">it should have been a <em>script</em>.”</span></span>
+      </blockquote>
+      <p class="quote-attr" data-reveal>— me, after doing it twice</p>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section class="contact" id="contact">
+      <div class="contact-inner container">
+        <div class="section-head">
+          <p class="section-index">( 05 )</p>
+          <p class="section-label">Contact</p>
+        </div>
+        <p class="contact-kicker" data-reveal>Got an idea worth automating?</p>
+        <h2 class="contact-title">
+          <span class="hero-line"><span class="hero-line-text" data-split>LET'S</span></span>
+          <span class="hero-line hero-line-serif"><span class="hero-line-text" data-split>ship</span></span>
+          <span class="hero-line"><span class="hero-line-text" data-split>IT</span></span>
+        </h2>
+        <div class="contact-grid">
+          <div class="contact-left">
+            <a class="contact-orb magnetic" href="mailto:yukarlandrew@icloud.com" data-cursor>
+              <span>Get in<br/>touch ↗</span>
+            </a>
+            <div class="contact-links">
+              <a class="contact-email link-underline" href="mailto:yukarlandrew@icloud.com" data-cursor>yukarlandrew@icloud.com</a>
+              <a class="contact-social" href="https://www.linkedin.com/in/yu-karl/" target="_blank" rel="noopener" data-cursor>LinkedIn ↗</a>
+              <a class="contact-social" href="https://github.com/yucompiled" target="_blank" rel="noopener" data-cursor>GitHub ↗</a>
+              <a class="contact-social" href="https://www.instagram.com/yu.karlandrew/" target="_blank" rel="noopener" data-cursor>Instagram ↗</a>
+            </div>
+          </div>
+          <form class="hi-form" id="hiForm" action="https://formspree.io/f/xnparjkn" method="POST">
+            <p class="hi-form-title">…or just say hi <span class="asterisk">✳</span></p>
+            <label class="hi-label" for="hiName">Name</label>
+            <input class="hi-input" id="hiName" name="name" type="text" placeholder="Ada Lovelace" autocomplete="name" required />
+            <label class="hi-label" for="hiMsg">Message</label>
+            <textarea class="hi-input hi-msg" id="hiMsg" name="message" rows="3" placeholder="hi karl — your friday button ruined my afternoon (positive)" required></textarea>
+            <div class="hi-row">
+              <label class="hi-label" for="hiHuman" id="hiHumanLabel">Human check: 3 + 4 =</label>
+              <input class="hi-input hi-human" id="hiHuman" inputmode="numeric" autocomplete="off" required />
+            </div>
+            <input class="hi-trap" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button class="btn-pill hi-send" id="hiSend" type="submit" data-cursor><span class="btn-pill-label">Send it</span><span class="btn-pill-arrow">↗</span></button>
+            <p class="hi-note" id="hiNote">no email needed</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="footer-inner container">
+      <p class="footer-copy">© 2026 Karl Yu — All rights reserved</p>
+      <p class="footer-time">Local time — <span id="localTime">00:00</span></p>
+      <nav class="footer-socials" aria-label="Social links">
+        <a href="https://github.com/yucompiled" target="_blank" rel="noopener" data-cursor>GitHub</a>
+        <a href="https://www.linkedin.com/in/yu-karl/" target="_blank" rel="noopener" data-cursor>LinkedIn</a>
+        <a href="https://www.instagram.com/yu.karlandrew/" target="_blank" rel="noopener" data-cursor>Instagram</a>
+      </nav>
+      <a class="footer-top" href="#top" data-cursor>Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
