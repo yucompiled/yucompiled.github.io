@@ -1353,6 +1353,10 @@ em {
   cursor: wait;
   pointer-events: none;
 }
+.friday-btn.is-locked {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
 
 .friday-count {
   font-family: var(--font-mono);
@@ -1591,9 +1595,11 @@ em {
 }
 .hi-row .hi-label {
   margin-top: 0;
+  white-space: nowrap;
 }
 .hi-human {
   max-width: 5.5rem;
+  min-width: 0;
   text-align: center;
   font-variant-numeric: tabular-nums;
 }
@@ -1796,6 +1802,26 @@ em {
   .portrait-wrap {
     width: min(17rem, 90%);
     margin-inline: auto;
+  }
+  .portrait-controls {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .portrait-tag {
+    white-space: normal;
+    text-align: center;
+  }
+  .hi-form {
+    padding: var(--space-3);
+  }
+  .hi-row {
+    gap: 0.6rem;
+  }
+  .hi-row .hi-label {
+    letter-spacing: 0.12em;
+  }
+  .hi-human {
+    max-width: 4.5rem;
   }
   /* comfortable thumb targets on touch screens */
   .p-arrow {

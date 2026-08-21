@@ -58,6 +58,7 @@
 
     let incidents = 0;
     let busy = false;
+    let locked = false;
     let timers = [];
 
     const LABELS = [
@@ -106,7 +107,7 @@
     }
 
     btn.addEventListener("click", () => {
-      if (busy) return;
+      if (busy || locked) return;
       busy = true;
       btn.disabled = true;
       timers.forEach(clearTimeout);
@@ -128,8 +129,20 @@
               incidents++;
               if (countEl) countEl.textContent = "incidents_caused: " + incidents;
               btn.textContent = LABELS[Math.min(incidents, LABELS.length - 1)];
-              busy = false;
-              btn.disabled = false;
+              if (incidents >= SCENARIOS.length) {
+                // out of chances, stays dead until reload
+                locked = true;
+                btn.classList.add("is-locked");
+                timers.push(
+                  setTimeout(() => {
+                    addLine("haven't you learned anything?", "tl-err");
+                    addLine("[locked] go enjoy your weekend. reload if you insist.", "");
+                  }, 750)
+                );
+              } else {
+                busy = false;
+                btn.disabled = false;
+              }
             }
           }, 480 * i)
         );
