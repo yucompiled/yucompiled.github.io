@@ -4,33 +4,33 @@
    ═══════════════════════════════════════════════════════════ */
 
 :root {
-  /* ── light champagne (default) ── */
-  --bg: #f4ede1;
-  --bg-soft: #ece2d0;
-  --ink: #211a12;
-  --ink-dim: #6b5c47;
+  /* ── light paper (default) ── */
+  --bg: #f6f3ec;
+  --bg-soft: #eee9df;
+  --ink: #1e1b16;
+  --ink-dim: #635c4e;
   --accent: #8a4a12;
   --accent-deep: #6e3a0e;
   --gold: #d9a05b;
-  --line: rgba(33, 26, 18, 0.18);
-  --line-soft: rgba(33, 26, 18, 0.09);
+  --line: rgba(30, 27, 22, 0.18);
+  --line-soft: rgba(30, 27, 22, 0.09);
   --ok: #2e6b3f;
   --err: #a83226;
-  --sel-fg: #f7f1e5;
-  --scroll-thumb: #c9ba9f;
+  --sel-fg: #f7f5f0;
+  --scroll-thumb: #cdc6b8;
   --grain-o: 0.04;
-  --ring-border: rgba(33, 26, 18, 0.45);
+  --ring-border: rgba(30, 27, 22, 0.45);
   --ring-active: rgba(138, 74, 18, 0.1);
-  --nav-a: rgba(244, 237, 225, 0.92);
-  --nav-b: rgba(244, 237, 225, 0);
+  --nav-a: rgba(246, 243, 236, 0.92);
+  --nav-b: rgba(246, 243, 236, 0);
   --orb-1: #e2b26a;
   --orb-2: #d98a4a;
   --orb-3: #e8d3a6;
-  --card-tint: rgba(255, 252, 244, 0.75);
+  --card-tint: rgba(255, 255, 253, 0.75);
   --card-border-hover: rgba(138, 74, 18, 0.6);
-  --num-tint: rgba(33, 26, 18, 0.06);
+  --num-tint: rgba(30, 27, 22, 0.06);
   --contact-glow: rgba(217, 160, 91, 0.28);
-  --frame: #fffdf7;
+  --frame: #fffefb;
   --portrait-shadow: 0 26px 50px rgba(59, 42, 18, 0.22);
 
   --font-display: "Fraunces", Georgia, serif;
